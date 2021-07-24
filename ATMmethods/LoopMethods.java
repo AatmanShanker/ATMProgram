@@ -8,7 +8,7 @@ public class LoopMethods{
 
   public void loopMethods(){
 
-    System.out.print("Enter operation(S, D, W)for balance, withdrawal and deposit or \"C\" to cancel or \"M\" to make a new account:");
+    System.out.print("Enter operation(S, D, W)for balance, withdrawal and deposit or \"C\" to cancel:");
     String userInput = scanInp.nextLine();
 
     while(!userInput.equals("C")){
@@ -52,6 +52,9 @@ public class LoopMethods{
         } else if(userInp3.equals("C") || userInp3.equals("c")){
           break;
         }
+      }else{
+        System.out.println("Invalid input!");
+        break;
       }
     }
   }
