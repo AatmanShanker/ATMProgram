@@ -14,10 +14,11 @@ public class LoopMethods{
     String userInput = scanInp.nextLine();
 
     while(!userInput.equals("C")){
+      User user = new User();
 
       if (userInput.equals("S")) {
 
-        atmMeth.showDetails();
+        user.showDetails();
 
         System.out.print("Do you want to do something again? or enter \"C\" to cancel:");
         String userInp = scanInp.nextLine();
@@ -30,7 +31,7 @@ public class LoopMethods{
 
       }else if (userInput.equals("D")){
 
-        atmMeth.depMoney();
+        user.depMoney();
 
         System.out.print("Do you want to do something again? or enter \"C\" to cancel:");
         String userInp2 = scanInp.nextLine();
@@ -43,7 +44,7 @@ public class LoopMethods{
 
       }else if (userInput.equals("W")){
 
-        atmMeth.withMoney();
+        user.withMoney();
 
         System.out.print("Do you want to do something again? or enter \"C\" to cancel:");
         String userInp3 = scanInp.nextLine();
@@ -55,17 +56,8 @@ public class LoopMethods{
         }
       }else if (userInput.equals("M")){
 
-        atmMeth.makeUserAcc();
-        System.out.println("Made a new account!");
-
-        System.out.print("Do you want to do something again? or enter \"C\" to cancel:");
-        String userInp3 = scanInp.nextLine();
-
-        if (userInp3.equals("Yes") || userInp3.equals("yes")) {
-          loopMethods();
-        } else if(userInp3.equals("C") || userInp3.equals("c")){
-          break;
-        }
+        User user1 = new User();
+        user1.makeUserAcc();
       }
     }
   }

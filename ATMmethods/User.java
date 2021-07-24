@@ -3,13 +3,15 @@ package ATMmethods;
 import java.util.Scanner;
 
 public class User{
-  Scanner inp = new Scanner();
-
+  
   static int userBal;
   static int userAge;
   static String userName;
   static String aadhaarId;
 
+  Scanner inp = new Scanner(System.in);
+
+  //Function for making user account
   public void makeUserAcc(){
 
     System.out.println("Welcome to ATM!\n");
@@ -34,4 +36,29 @@ public class User{
       System.exit(0);
     }
   }
+
+  public void withMoney(){
+
+    System.out.print("Enter the money to withdraw:");
+    int withInp = inp.nextInt();
+
+    userBal -= withInp;
+  }
+
+  public void depMoney(){
+
+    System.out.print("Enter the money to deposit:");
+    int depInp = inp.nextInt();
+
+    userBal += depInp;
+  }
+
+  public void showDetails(){
+       System.out.println("===========================");
+       System.out.println("\nName:" + userName);
+       System.out.println("Age:" + userAge);
+       System.out.println("ID:" + aadhaarId);
+       System.out.println("Balance:" + userBal + "\n");
+       System.out.println("===========================");
+    }
 }
