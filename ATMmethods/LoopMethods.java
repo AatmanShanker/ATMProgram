@@ -8,8 +8,6 @@ public class LoopMethods{
 
   public void loopMethods(){
 
-    AtmMethod atmMeth = new AtmMethod();
-
     System.out.print("Enter operation(S, D, W)for balance, withdrawal and deposit or \"C\" to cancel or \"M\" to make a new account:");
     String userInput = scanInp.nextLine();
 
@@ -54,6 +52,7 @@ public class LoopMethods{
         } else if(userInp3.equals("C") || userInp3.equals("c")){
           break;
         }
+      }
     }
   }
 }
