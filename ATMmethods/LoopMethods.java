@@ -54,11 +54,6 @@ public class LoopMethods{
         } else if(userInp3.equals("C") || userInp3.equals("c")){
           break;
         }
-      }else if (userInput.equals("M")){
-
-        User user1 = new User();
-        user1.makeUserAcc();
-      }
     }
   }
 }
